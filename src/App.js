@@ -4,33 +4,35 @@ import React from 'react';
 // import './App.css';
 import "./styles/styles.scss";
 import Curso from './Curso';
+import Banner from "./Banner"
+import Formulario from "./Formulario"
 
-const cursos = [
-  {
-    "title":"React desde cero",
-    "image":"https://drupal.ed.team/sites/default/files/imagenes-cdn-edteam/2019-04/React%20desarrollo%20frotend.png",
-    "price":30,
-    "pofesor":"Beto Quiroga",
-  },
-  {
-    "title":"Drupal desde cero",
-    "image":"https://drupal.ed.team/sites/default/files/styles/medium/public/courses/images/drupal-poster-720_3.jpg?itok=e93ErhMN",
-    "price":50,
-    "pofesor":"Beto Quiroga",
-  },
-  {
-    "title":"Go desde cero",
-    "image":"https://drupal.ed.team/sites/default/files/styles/medium/public/courses/images/go_0.jpg?itok=k2amLhrN",
-    "price":40,
-    "pofesor":"Alexys Lozada",
-  },
-  {
-    "title":"HTML5 desde cero",
-    "image":"https://drupal.ed.team/sites/default/files/styles/medium/public/courses/images/HTML-2018.jpg?itok=Gyvm-W9t",
-    "price":20,
-    "pofesor":"Alvaro Felipe",
-  }
-]
+// const cursos = [
+//   {
+//     "title":"React desde cero",
+//     "image":"https://drupal.ed.team/sites/default/files/imagenes-cdn-edteam/2019-04/React%20desarrollo%20frotend.png",
+//     "price":30,
+//     "pofesor":"Beto Quiroga",
+//   },
+//   {
+//     "title":"Drupal desde cero",
+//     "image":"https://drupal.ed.team/sites/default/files/styles/medium/public/courses/images/drupal-poster-720_3.jpg?itok=e93ErhMN",
+//     "price":50,
+//     "pofesor":"Beto Quiroga",
+//   },
+//   {
+//     "title":"Go desde cero",
+//     "image":"https://drupal.ed.team/sites/default/files/styles/medium/public/courses/images/go_0.jpg?itok=k2amLhrN",
+//     "price":40,
+//     "pofesor":"Alexys Lozada",
+//   },
+//   {
+//     "title":"HTML5 desde cero",
+//     "image":"https://drupal.ed.team/sites/default/files/styles/medium/public/courses/images/HTML-2018.jpg?itok=Gyvm-W9t",
+//     "price":20,
+//     "pofesor":"Alvaro Felipe",
+//   }
+// ]
 
 // function App() {
 //   return (
@@ -68,27 +70,16 @@ const cursos = [
 // )
 const App = () => (
   <>
-  <div className="main-banner img-container l-section" id="main-banner">
-    <div className="ed-grid lg-grid-6">
-      <div className="lg-cols-4 lg-x-2">
-        <img className="main-banner__img" src="https://cdn-images-1.medium.com/max/2400/1*vOrfclMVms7S4608zxC-ig.jpeg" alt="banner" />
-        <div className="main-banner__data s-center">
-          <p className="t2 s-mb-0">Cursos de EDteam</p>
-          <p> Subtítulo del banner</p>
-          <a href="https://ed.team" className="button">subcribete</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div className="ed-grid m-grid-3">
-    {
-      cursos.map( curso => <Curso title={curso.title} image={curso.image} price={curso.price} profesor={curso.pofesor} /> )
-    }     
-  </div>
+  <Banner />
+  <Formulario name="EDteam"/>
   </>
 
 )
+/* <div className="ed-grid m-grid-3">
+  {
+    cursos.map( curso => <Curso title={curso.title} image={curso.image} price={curso.price} profesor={curso.pofesor} /> )
+  }     
+</div> */
 
 export default App;
 
